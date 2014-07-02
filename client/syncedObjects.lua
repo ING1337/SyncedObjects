@@ -63,7 +63,7 @@ end
 -- ####################################################################################################################################
 
 function SyncedObjects:InitObject(e)
-	e.distance = e.distance or 1024
+	e.distance = e.distance or 512
 	e.position = e.position or Vector3()
 	e.angle    = e.angle or Angle()
 	e.time     = e.time and e.time * 1000 + self.timer:GetMilliseconds() or nil
