@@ -148,7 +148,6 @@ function SyncedObjects:Attach(e)
 			bones      = e.parent:GetBones()
 			e.angle    = bones[e.bone].angle
 			e.position = bones[e.bone].position + e.angle * e.offset
-			
 		else
 			e.angle    = e.parent:GetAngle()
 			e.position = e.parent:GetPosition() + e.angle * e.offset
