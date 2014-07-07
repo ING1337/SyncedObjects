@@ -69,10 +69,11 @@ function SyncedObjects:InitObject(e)
 	e.velocity = e.velocity or Vector3()
 	e.spin     = e.spin or Angle()
 	e.offset   = e.offset or e.position
-	e.rotate   = e.rotate or e.angle
+	e.rotate   = e.rotate or (e.angle or Angle())
 	e.angle    = Angle()
 	
 	if e.parent then 
+		
 		self:Attach(e)
 		if e.velocity:Length() > 0 then 
 			e.velocity = IsValid(e.parent) and e.parent:GetAngle() * e.velocity or e.velocity
