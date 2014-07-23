@@ -90,7 +90,7 @@ function SyncedObjects:CreateObject(e)
 	elseif e.path then
 		e.object = ClientParticleSystem.Create(AssetLocation.Game, e)
 	elseif e.bank_id then
-		e.object = ClientEffect.Create(AssetLocation.Game, e)
+		e.object = ClientSound.Create(AssetLocation.Game, e)
 	elseif e.multiplier then
 		e.object = ClientLight.Create(e)
 	elseif e.model then
